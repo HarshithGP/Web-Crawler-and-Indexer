@@ -70,14 +70,11 @@ public class MyCrawler extends WebCrawler{
 			 location = Location.OK;
 			 crawledData.setUniqueURLInWebsite(Integer.toString(url.getURL().hashCode()));
 		 }
-		 else{ //if(url.getURL().contains("usc.edu")){
+		 else{ 
 			 location = Location.N_OK;
 			 crawledData.setUniqueURLOutsideWebsite(Integer.toString(url.getURL().hashCode()));
 		 }
-//		 else{
-//			 location = Location.N_OK;
-//			 crawledData.setUniqueURLOutsideUSC(Integer.toString(url.getURL().hashCode()));
-//		 }
+//		
 		 urlData.setLocation(location);
 		 urlDataList.add(urlData);
 		 crawledData.setUrlDataList(urlDataList);
@@ -177,7 +174,7 @@ public class MyCrawler extends WebCrawler{
 		}else if(statusCode/100 == 3){
 			//crawledData.setStatusMoved(crawledData.getStatusMoved() + 1);
 			crawledData.setFetchesAborted(crawledData.getFetchesAborted() + 1);
-		}/*else if(statusCode == HttpStatus.SC_NOT_FOUND){
+		}else if(statusCode == HttpStatus.SC_NOT_FOUND){
 			crawledData.setStatusNotFound(crawledData.getStatusNotFound() + 1);
 			crawledData.setFetchesFailed(crawledData.getFetchesFailed() + 1);
 		}else if(statusCode == HttpStatus.SC_UNAUTHORIZED){
@@ -185,7 +182,7 @@ public class MyCrawler extends WebCrawler{
 			crawledData.setFetchesFailed(crawledData.getFetchesFailed() + 1);
 		}else if(statusCode == HttpStatus.SC_FORBIDDEN){
 			crawledData.setStatusForbidden(crawledData.getStatusForbidden() + 1);
-			crawledData.setFetchesFailed(crawledData.getFetchesFailed() + 1);*/
+			crawledData.setFetchesFailed(crawledData.getFetchesFailed() + 1);
 		else{
 			crawledData.setFetchesFailed(crawledData.getFetchesFailed()+1);
 		}
@@ -213,7 +210,7 @@ public class MyCrawler extends WebCrawler{
 	   {
 	       contentType_counter.put(type, 1);
 	   }
-		/*if(type.compareTo("application/pdf") == 0){
+		if(type.compareTo("application/pdf") == 0){
 			crawledData.setTypePdf(crawledData.getTypePdf() + 1);
 		}else if(type.compareTo("image/gif") == 0){
 			crawledData.setTypeGif(crawledData.getTypeGif() + 1);
@@ -225,6 +222,6 @@ public class MyCrawler extends WebCrawler{
 			crawledData.setTypeJpeg(crawledData.getTypeJpeg() + 1);
 		}else if (type.compareTo("image/png") == 0){
 			crawledData.setTypePng(crawledData.getTypePng() + 1);
-		}*/
-}
+		}
+	}
 }
