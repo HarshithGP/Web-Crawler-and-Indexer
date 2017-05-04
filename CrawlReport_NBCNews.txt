@@ -1,5 +1,3 @@
-Name : Harshith Guru Prasad 
-USC ID : 2735085894 
 News site crawled : nbcnews.com 
  
 Fetch Statistics
