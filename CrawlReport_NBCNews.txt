@@ -1,0 +1,41 @@
+Name : Harshith Guru Prasad 
+USC ID : 2735085894 
+News site crawled : nbcnews.com 
+ 
+Fetch Statistics
+==========================
+# fetches attempted : 19984
+# fetches succeeded : 19319
+# fetches aborted : 202
+# fetches failed : 463
+
+Outgoing URLs
+==========================
+Total URLs extracted : 1656092
+# unique URLs extracted : 797416
+# unique URLs within News Site : 47549
+# unique URLs outside News Site : 749867
+
+Status Codes
+==========================
+200 OK : 19319
+301 Moved Permanently : 168
+302 Moved Temporarily : 34
+404 Not Found : 456
+500 Internal Server Error : 1
+502 Bad Gateway : 6
+
+File Sizes
+=========================
+< 1KB : 3
+1KB ~ <10KB : 4
+10KB ~ <100KB : 11047
+100KB ~ <1MB : 8224
+>= 1MB : 41
+
+Content Types
+=========================
+text/html : 19315
+image/png : 1
+image/gif : 2
+image/vnd.microsoft.icon : 1
