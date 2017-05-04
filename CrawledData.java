@@ -17,7 +17,7 @@ public class CrawledData {
 	int totalUrls;
 	Set<String> uniqueURLInWebsite;
 	Set<String> uniqueURLOutsideWebsite;
-	//Set<String> uniqueURLOutsideUSC;
+	Set<String> uniqueURLOutsideUSC;
 	int statusOK;
 	int statusMoved;
 	int statusUnauth;
@@ -48,7 +48,7 @@ public class CrawledData {
 		totalUrls = 0;
 		uniqueURLInWebsite = new HashSet<String>();
 		uniqueURLOutsideWebsite = new HashSet<String>();
-		//uniqueURLOutsideUSC = new HashSet<String>();
+		uniqueURLOutsideUSC = new HashSet<String>();
 		statusOK = 0;
 		statusMoved = 0;
 		statusUnauth = 0;
@@ -141,13 +141,13 @@ public class CrawledData {
 		this.uniqueURLOutsideWebsite.add(uniqueURLOutsideWebsite);
 	}
 
-	/*public Set<String> getUniqueURLOutsideUSC() {
+	public Set<String> getUniqueURLOutsideUSC() {
 		return uniqueURLOutsideUSC;
-	}*/
+	}
 
-	/*public void setUniqueURLOutsideUSC(String uniqueURLOutsideUSC) {
+	public void setUniqueURLOutsideUSC(String uniqueURLOutsideUSC) {
 		this.uniqueURLOutsideUSC.add(uniqueURLOutsideUSC);
-	}*/
+	}
 
 	public int getStatusOK() {
 		return statusOK;
