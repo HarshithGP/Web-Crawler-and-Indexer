@@ -49,9 +49,9 @@ public class Controller {
 		 */
 		 controller.addSeed("http://www.nbcnews.com/");
 		 
-		 /*for(String domain: crawlDomains){
+		 (String domain: crawlDomains){
 			 controller.addSeed(domain);
-		 }*/
+		 }
 		 
 		 MyCrawler.configure(crawlStorageFolder);
 		 /*
@@ -113,7 +113,7 @@ public class Controller {
 		 
 		 Set<String> uniqueURLInWebsiteSet = new HashSet<String>();		 
 		 Set<String> uniqueURLOutsideWebsiteSet = new HashSet<String>();
-		 //Set<String> uniqueURLOutsideUSCSet = new HashSet<String>();
+		 Set<String> uniqueURLOutsideUSCSet = new HashSet<String>();
 		 
 		 for(CrawledData crawledData : crawledDataList){
 			 List<FetchData> fetchDataList = crawledData.getFetchDataList();
@@ -138,7 +138,7 @@ public class Controller {
 			totalUrls+= crawledData.getTotalUrls();
 			uniqueURLInWebsiteSet.addAll(crawledData.getUniqueURLInWebsite());
 			uniqueURLOutsideWebsiteSet.addAll(crawledData.getUniqueURLOutsideWebsite());
-			//uniqueURLOutsideUSCSet.addAll(crawledData.getUniqueURLOutsideUSC());
+			uniqueURLOutsideUSCSet.addAll(crawledData.getUniqueURLOutsideUSC());
 			statusOK += crawledData.getStatusOK();
 			statusMoved += crawledData.getStatusMoved();
 			statusUnauth += crawledData.getStatusUnauth();
@@ -162,7 +162,7 @@ public class Controller {
 		 
 		 uniqueURLInWebsite = uniqueURLInWebsiteSet.size();
 		 uniqueURLOutsideWebsite = uniqueURLOutsideWebsiteSet.size();
-		 //uniqueURLOutsideUSC = uniqueURLOutsideUSCSet.size();
+		 uniqueURLOutsideUSC = uniqueURLOutsideUSCSet.size();
 		 
 		 report.append("Name: Harshith\n");
 		 report.append("USC ID: XXX-XXX-XXX\n");
@@ -181,15 +181,15 @@ public class Controller {
 		 report.append("# unique URLs extracted: " + (uniqueURLInWebsite+uniqueURLOutsideWebsite) + "\n");
 		 report.append("# unique URLs within Website: " + uniqueURLInWebsite + "\n");
 		 report.append("# unique URLs outside Website: " + uniqueURLOutsideWebsite + "\n");
-		 //report.append("# unique URLs outside USC: " + uniqueURLOutsideUSC + "\n");
+		 report.append("# unique URLs outside USC: " + uniqueURLOutsideUSC + "\n");
 		 
 		 report.append("\nStatus Codes:\n");
 		 report.append("================\n");
-		 /*report.append("200 OK: " + statusOK + "\n");
+		 report.append("200 OK: " + statusOK + "\n");
 		 report.append("301 Moved Permanently: " + statusMoved + "\n");
 		 report.append("401 Unauthorized: " + statusUnauth + "\n");
 		 report.append("403 Forbidden: " + statusForbidden + "\n");
-		 report.append("404 Not Found: " + statusNotFound + "\n");*/
+		 report.append("404 Not Found: " + statusNotFound + "\n");
 		 
 		 for(Integer key: MyCrawler.status.keySet()){
 			 report.append(key + ": "+ MyCrawler.status.get(key));
@@ -210,12 +210,12 @@ public class Controller {
 		 for (String key : MyCrawler.contentType_counter.keySet()) {
 			  report.append(key + ":  "+ MyCrawler.contentType_counter.get(key));
 			  report.append("\n");}
-		 /*report.append("text/html: " + typeText + "\n");
+		 report.append("text/html: " + typeText + "\n");
 		 report.append("image/gif: " + typeGif + "\n");
 		 report.append("image/jpeg: " + typeJpeg + "\n");
 		 report.append("image/png: " + typePng + "\n");
 		 report.append("application/pdf: " + typePdf + "\n");
-		 report.append("doc: " + typeDoc + "\n");*/
+		 report.append("doc: " + typeDoc + "\n");
 		 report.close();
 	}
 
