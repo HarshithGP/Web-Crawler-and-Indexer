@@ -43,7 +43,7 @@ public class Controller {
 		 RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
 		 CrawlController controller = new CrawlController(config, pageFetcher, robotstxtServer);
 		 /*
-		 * For each crawl, you need to add some seed urls. These are the first
+		 * For each crawl, add seed urls. These are the first
 		 * URLs that are fetched and then the crawler starts following links
 		 * which are found in these pages
 		 */
@@ -56,7 +56,6 @@ public class Controller {
 		 MyCrawler.configure(crawlStorageFolder);
 		 /*
 		 * Start the crawl. This is a blocking operation, meaning that your code
-		7
 		 * will reach the line after this only when crawling is finished.
 		 */
 		 controller.start(MyCrawler.class, numberOfCrawlers);
